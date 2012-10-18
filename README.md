@@ -42,4 +42,5 @@ eg;
 
 
 ====
-doing  % python2.6 trakt.py reset   will force the json to update no matter what the date is 
+    % python2.6 trakt.py reset  
+    will force the json to update no matter what the date is 
