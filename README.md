@@ -12,9 +12,14 @@ need trakt.tv api key as well
 
 eg;
 % python2.6 trakt.py
+
+
 Two and a Half Men airs at 8:30pm on Thursday
+
          10.4 - You Do Know What the Lollipop Is For CBS
+         
          watchlist: True - runtime: 30min
+
 Person of Interest airs at 9:00pm on Thursday
          2.3 - Masquerade CBS
          watchlist: True - runtime: 60min
