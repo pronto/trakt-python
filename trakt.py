@@ -47,7 +47,8 @@ def update_json():
 #caching, sees if cache folder is there, if not make it
 #if it is, it gets the date from the cache
 if not os.path.exists(tmppath+"data"):
-    os.makedirs(tmppath)
+    if not os.path.exists(tmppath):
+        os.makedirs(tmppath)
     out = user_cal_shows()
     update_json()
 else:
