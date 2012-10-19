@@ -47,4 +47,4 @@ eg;
 
 ====screenshot===
 
-![screenshot(http://i.imgur.com/YrKEQ.png)
+![screenshot](http://i.imgur.com/YrKEQ.png)
