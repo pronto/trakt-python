@@ -22,16 +22,17 @@ def user_cal_shows():
 def outputrun():
     for i in range(len(out)):
         for b in range(len(out[i]['episodes'])):
-            showname = out[i]['episodes'][b]['show']['title']  #Fringe
-            ep_name = out[i]['episodes'][b]['episode']['title']  #In Absentia
-            network = out[i]['episodes'][b]['show']['network']  #FOX
-            airtime = out[i]['episodes'][b]['show']['air_time']  #9:00pm
-            season = out[i]['episodes'][b]['episode']['season']  #5
-            ep_num = out[i]['episodes'][b]['episode']['number']  #2
             in_watch = out[i]['episodes'][b]['show']['in_watchlist'] #True
-            airday = out[i]['episodes'][b]['show']['air_day']  #Friday
-            runtime = out[i]['episodes'][b]['show']['runtime']  #60v    
+            #make sure the show is in the watch list
             if in_watch == True:
+                showname = out[i]['episodes'][b]['show']['title']  #Fringe
+                ep_name = out[i]['episodes'][b]['episode']['title']  #In Absentia
+                network = out[i]['episodes'][b]['show']['network']  #FOX
+                airtime = out[i]['episodes'][b]['show']['air_time']  #9:00pm
+                season = out[i]['episodes'][b]['episode']['season']  #5
+                ep_num = out[i]['episodes'][b]['episode']['number']  #2
+                airday = out[i]['episodes'][b]['show']['air_day']  #Friday
+                runtime = out[i]['episodes'][b]['show']['runtime']  #60v    
                 print showname + " airs at \033[1m" +  airtime + "\033[0m on \033[1m" + airday + "\033[0m"
                 print "\t " + str(season) + "." + str(ep_num) + " - " + ep_name + " \033[1m" + network +"\033[0m"
                 print "\t watchlist: " + str(in_watch) + " - runtime: " + str(runtime) + "min"
@@ -49,8 +50,7 @@ def update_json():
 if not os.path.exists(tmppath+"data"):
     if not os.path.exists(tmppath):
         os.makedirs(tmppath)
-    out = user_cal_shows()
-    update_json()
+    out = update_json()
 else:
     #load from the file
     with open(tmppath+"data", "rb") as fp:
