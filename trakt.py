@@ -31,10 +31,10 @@ def outputrun():
             in_watch = out[i]['episodes'][b]['show']['in_watchlist'] #True
             airday = out[i]['episodes'][b]['show']['air_day']  #Friday
             runtime = out[i]['episodes'][b]['show']['runtime']  #60v    
-
-            print showname + " airs at \033[1m" +  airtime + "\033[0m on \033[1m" + airday + "\033[0m"
-            print "\t " + str(season) + "." + str(ep_num) + " - " + ep_name + " \033[1m" + network +"\033[0m"
-            print "\t watchlist: " + str(in_watch) + " - runtime: " + str(runtime) + "min"
+            if in_watch == True:
+                print showname + " airs at \033[1m" +  airtime + "\033[0m on \033[1m" + airday + "\033[0m"
+                print "\t " + str(season) + "." + str(ep_num) + " - " + ep_name + " \033[1m" + network +"\033[0m"
+                print "\t watchlist: " + str(in_watch) + " - runtime: " + str(runtime) + "min"
 
 def update_json():
     out = user_cal_shows()
