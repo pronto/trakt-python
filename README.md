@@ -44,3 +44,7 @@ eg;
 ====
     % python2.6 trakt.py reset  
     will force the json to update no matter what the date is 
+
+====screenshot===
+
+![screenshot(http://i.imgur.com/YrKEQ.png)
